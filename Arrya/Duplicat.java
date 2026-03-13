@@ -11,6 +11,9 @@ public class Duplicat {
             }
         }
         System.out.println(i+1);
+        for(int j=0;j<6;j++){
+          System.out.print(nums[j]+" ");
+        }
   }
     
 }

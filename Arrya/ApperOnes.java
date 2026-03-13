@@ -14,6 +14,7 @@ class OnesApper{
         }
     }
 }
+//optimal solution
     public void usingxor(int arr[]){
         int xor1=0;
         for(int i=0;i<arr.length;i++){
