@@ -9,16 +9,16 @@ public void findLowerBoudn(int arr[],int target){
         int mid=low+(high-low)/2;
       if(arr[mid]>=target){
           ans=mid;
-          high=mid-1;
+          low=mid+1;
       }
       else{
-        low=mid+1;
+        high=mid-1;
       }
     }
-    System.out.print("Lower Bounds founds at:"+ans);
+    System.out.print("uper Bounds founds at:"+ans);
    }
 }
-public class lowerBound {
+public class uperBounds {
     public static void main(String[] args){
         int arr[]={1,2,3,3,5,8,8,10,10,11};
         int taget=9;
