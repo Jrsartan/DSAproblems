@@ -11,6 +11,22 @@ class kth_Miss_num{
         }
         return k;
     }
+    public int BinarySearch(int arr[],int k){
+        int len=arr.length;
+        int low=0;
+        int high=len-1;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            int missing = arr[mid]-(mid+1);
+            if(missing<k){
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }
+        }
+        return k+high+1;
+    }
 }
 public class kthMissingNum {
      public static void main(String[] args){
@@ -18,6 +34,8 @@ public class kthMissingNum {
         int k=5;
         kth_Miss_num kth = new kth_Miss_num();
         int res= kth.KthMissingNum(ar, k);
-        System.out.print(res);
+        int result= kth.BinarySearch(ar,k);
+        System.out.println(res);
+        System.out.print(result);
      }
 }
